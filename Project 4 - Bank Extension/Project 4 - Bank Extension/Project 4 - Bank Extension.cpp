@@ -697,20 +697,20 @@ void PrintTotalBalances(vector<sClient> vClients)
 	cout << "_________________________________________\n"
 		<< endl;
 
-	double sum = 0;
+	double TotalBalances = 0;
 	for (sClient Client : vClients)
 	{
 		PrintTotalBalancesInfo(Client);
 		cout << endl;
 
-		sum += Client.AccountBalance;
+		TotalBalances += Client.AccountBalance;
 	}
 
 	cout << "\n_______________________________________________________";
 	cout << "_________________________________________\n"
 		<< endl;
 
-	cout << "\t\t\t\t\tTotal Balances = " << sum << endl;
+	cout << "\t\t\t\t\tTotal Balances = " << TotalBalances << endl;
 }
 
 //////////////////////Transactions////////////////////

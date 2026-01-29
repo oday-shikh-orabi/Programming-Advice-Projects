@@ -765,7 +765,6 @@ void UserChoeseFromTransactionsMenue(enTransactionsMenueOptions Answer, vector<s
 	}
 	case enTransactionsMenueOptions::eMainMenue:
 	{
-		ShowMainMenueScreen();
 		break;
 	}
 	}
@@ -797,15 +796,7 @@ void Transactions(vector<sClient> &vClients)
 
 			system("pause>0");
 		}
-		else if (enAnswer == enTransactionsMenueOptions::eMainMenue)
-		{
-			system("cls");
-
-			UserChoeseFromTransactionsMenue(enAnswer, vClients);
-			cout << "\n\nPrees any key to go back to Transactions Menue..." << endl;
-		}
-
-
+		
 	} while (enAnswer != enTransactionsMenueOptions::eMainMenue);
 	
 

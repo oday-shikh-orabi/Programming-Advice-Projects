@@ -53,6 +53,11 @@ struct sUser
 };
 
 
+
+sUser CurrentUser;
+
+
+
 /////////Functions shared with more than one list/////////
 
 string Tap(int Number)
@@ -206,7 +211,7 @@ void PrintClientCard(sClient Client)
 	cout << "\n-----------------------------------------\n";
 }
 
-void ShowMainMenueScreen(sUser& User);
+void ShowMainMenueScreen();
 
 
 void Login();
@@ -367,6 +372,8 @@ bool HasPermission(int UserPermission, enPermission Permission)
 {
 	return (UserPermission == FullAccess) ||
 		(UserPermission & Permission);
+	//ÈÏá ÇáËÇäíÉ áÇä ÈÚãáíÉ ÇáÝÍÕ ÇáÑÞã íáí ÑÍ íÑÌÚ åæ äÝÓæ ÇáÈÑãíÔä
+	// ((UserPermission & Permission) == Permission ? true : false);
 }
 
 void AssigningPermissionsToUser(sUser& User)
@@ -1514,14 +1521,14 @@ void PrintAccessDenied()
 	cout << "--------------------------------------------" << endl;
 }
 
-void UserChoeseFromMainMenue(enMainMenueOptions Answer, vector<sClient>& vClients, sUser& User)
+void UserChoeseFromMainMenue(enMainMenueOptions Answer, vector<sClient>& vClients)
 {
 
 	switch (Answer)
 	{
 	case enMainMenueOptions::eShowClientList:
 	{
-		if (HasPermission(User.Permission, ePerm_ShowClientList))
+		if (HasPermission(CurrentUser.Permission, ePerm_ShowClientList))
 		{
 			PrintAllClientsData(vClients);
 			break;
@@ -1535,7 +1542,7 @@ void UserChoeseFromMainMenue(enMainMenueOptions Answer, vector<sClient>& vClient
 	}
 	case enMainMenueOptions::eAddNewClient:
 	{
-		if (HasPermission(User.Permission, ePerm_AddNewClient))
+		if (HasPermission(CurrentUser.Permission, ePerm_AddNewClient))
 		{
 			AddClients(vClients);
 			break;
@@ -1548,7 +1555,7 @@ void UserChoeseFromMainMenue(enMainMenueOptions Answer, vector<sClient>& vClient
 	}
 	case enMainMenueOptions::eDeleteClient:
 	{
-		if (HasPermission(User.Permission, ePerm_DeleteClient))
+		if (HasPermission(CurrentUser.Permission, ePerm_DeleteClient))
 		{
 			DeleteClientByAccountNumber(vClients);
 			break;
@@ -1561,7 +1568,7 @@ void UserChoeseFromMainMenue(enMainMenueOptions Answer, vector<sClient>& vClient
 	}
 	case enMainMenueOptions::eUpdetClientInfo:
 	{
-		if (HasPermission(User.Permission, ePerm_UpdateClientInfo))
+		if (HasPermission(CurrentUser.Permission, ePerm_UpdateClientInfo))
 		{
 			UpdateClientByAccountNumber(vClients);
 			break;
@@ -1574,7 +1581,7 @@ void UserChoeseFromMainMenue(enMainMenueOptions Answer, vector<sClient>& vClient
 	}
 	case enMainMenueOptions::eFindClilent:
 	{
-		if (HasPermission(User.Permission, ePerm_FindClient))
+		if (HasPermission(CurrentUser.Permission, ePerm_FindClient))
 		{
 			FindClient(vClients);
 			break;
@@ -1587,7 +1594,7 @@ void UserChoeseFromMainMenue(enMainMenueOptions Answer, vector<sClient>& vClient
 	}
 	case enMainMenueOptions::eTransactions:
 	{
-		if (HasPermission(User.Permission, ePerm_Transactions))
+		if (HasPermission(CurrentUser.Permission, ePerm_Transactions))
 		{
 			Transactions(vClients);
 			break;
@@ -1600,7 +1607,7 @@ void UserChoeseFromMainMenue(enMainMenueOptions Answer, vector<sClient>& vClient
 	}
 	case enMainMenueOptions::eMangeUser:
 	{
-		if (HasPermission(User.Permission, ePerm_ManageUser))
+		if (HasPermission(CurrentUser.Permission, ePerm_ManageUser))
 		{
 			MangeUsers();
 			break;
@@ -1628,7 +1635,7 @@ short ReadUserChoiceInMainMenue()
 	return Answer;
 }
 
-void ShowMainMenueScreen(sUser& User)
+void ShowMainMenueScreen()
 {
 	vector<sClient> vClients;
 
@@ -1650,7 +1657,7 @@ void ShowMainMenueScreen(sUser& User)
 			vClients = LoadCleintsDataFromFile(ClientsFileName);
 
 
-			UserChoeseFromMainMenue(enAnswer, vClients, User);
+			UserChoeseFromMainMenue(enAnswer, vClients);
 
 			cout << "\n\n\nPrees any key to go back to Main Menue...";
 
@@ -1675,7 +1682,7 @@ void PrintLoginScreen()
 	cout << "--------------------------------------------" << endl;
 }
 
-bool CheckUserAndGetPermissions(sUser& UserInput)
+bool CheckUserAndGetPermissions(sUser& User)
 {
 	vector<sUser> vUsers;
 
@@ -1683,11 +1690,11 @@ bool CheckUserAndGetPermissions(sUser& UserInput)
 
 	for (sUser& User : vUsers)
 	{
-		if (UserInput.Username == User.Username)
+		if (User.Username == User.Username)
 		{
-			if (UserInput.Password == User.Password)
+			if (User.Password == User.Password)
 			{
-				UserInput.Permission = User.Permission;
+				User.Permission = User.Permission;
 				return true;
 			}
 		}
@@ -1701,15 +1708,13 @@ void Login()
 {
 	system("cls");
 
-	sUser UserInput;
-
 	PrintLoginScreen();
-	UserInput.Username = ReadUserName("Enter Username? ");
-	UserInput.Password = ReadPassword("Enter Password? ");
+	CurrentUser.Username = ReadUserName("Enter Username? ");
+	CurrentUser.Password = ReadPassword("Enter Password? ");
 
-	if (CheckUserAndGetPermissions(UserInput))
+	if (CheckUserAndGetPermissions(CurrentUser))
 	{
-		ShowMainMenueScreen(UserInput);
+		ShowMainMenueScreen();
 	}
 	else
 	{
@@ -1720,13 +1725,13 @@ void Login()
 
 			cout << "Invilad Username/Password!\n";
 
-			UserInput.Username = ReadUserName("Enter Username? ");
-			UserInput.Password = ReadPassword("Enter Password? ");
+			CurrentUser.Username = ReadUserName("Enter Username? ");
+			CurrentUser.Password = ReadPassword("Enter Password? ");
 
 
-		} while (!CheckUserAndGetPermissions(UserInput));
+		} while (!CheckUserAndGetPermissions(CurrentUser));
 
-		ShowMainMenueScreen(UserInput);
+		ShowMainMenueScreen();
 	}
 
 }

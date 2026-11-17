@@ -10,10 +10,14 @@
 
 ## 📁 المشاريع الحالية
 
-- 🎮 **مشروع 1:** لعبة حجر ورقة مقص   
-- 🧮 **مشروع 2:** لعبة أسئلة رياضية حسب اختيار المستخدم
+- 🎮 **مشروع 1:** لعبة حجر ورقة مقص.
+- 🧮 **مشروع 2:** لعبة أسئلة رياضية حسب اختيار المستخدم.
+- 🏦 **مشروع 3:** نظام إدارة بنك (Bank System).
+- 🏧 **مشروع 4:** نظام الصراف الآلي (ATM System).
+- ↩️ **مشروع 5:** نظام التراجع والإعادة (Undo & Redo).
+- 🎟️ **مشروع 6:** نظام إدارة طوابير الانتظار (Queue Line System).
 
-> سيتم إضافة مشاريع جديدة تدريجيًا مع التقدم في خارطة الطريق.
+> تتضمن بعض المشاريع نسخًا محسّنة تم تطويرها مع اكتساب المزيد من الخبرة. ستتم إضافة مشاريع جديدة تدريجيًا مع التقدم في خارطة الطريق.
 
 ---
 
@@ -53,10 +57,14 @@ Each project is stored in a separate folder and currently developed using **C++*
 
 ## 📁 Current Projects
 
-- 🎮 **Project 1:** Rock Paper Scissors Game  
-- 🧮 **Project 2:** Math Quiz Game with user-selected operations
+- 🎮 **Project 1:** Rock Paper Scissors Game.
+- 🧮 **Project 2:** Math Quiz Game with user-selected operations.
+- 🏦 **Project 3:** Bank Management System.
+- 🏧 **Project 4:** ATM System.
+- ↩️ **Project 5:** Undo & Redo System.
+- 🎟️ **Project 6:** Queue Line Management System.
 
-> More projects will be added gradually as I progress through the roadmap.
+> Some projects include improved versions developed as I gained more experience. More projects will be added gradually as I progress through the roadmap.
 
 ---
 

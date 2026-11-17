@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lbTitle = new System.Windows.Forms.Label();
             this.gbSize = new System.Windows.Forms.GroupBox();
-            this.rdLarge = new System.Windows.Forms.RadioButton();
-            this.rdMedium = new System.Windows.Forms.RadioButton();
-            this.rdSmall = new System.Windows.Forms.RadioButton();
+            this.rbLarge = new System.Windows.Forms.RadioButton();
+            this.rbMedium = new System.Windows.Forms.RadioButton();
+            this.rbSmall = new System.Windows.Forms.RadioButton();
             this.gbToppings = new System.Windows.Forms.GroupBox();
             this.chkGreenPeppers = new System.Windows.Forms.CheckBox();
             this.chkOlives = new System.Windows.Forms.CheckBox();
@@ -42,11 +42,11 @@
             this.chkMushrooms = new System.Windows.Forms.CheckBox();
             this.chkExtraCheese = new System.Windows.Forms.CheckBox();
             this.gbCrustTybe = new System.Windows.Forms.GroupBox();
-            this.rdThickCrust = new System.Windows.Forms.RadioButton();
-            this.rdThinCrust = new System.Windows.Forms.RadioButton();
+            this.rbThickCrust = new System.Windows.Forms.RadioButton();
+            this.rbThinCrust = new System.Windows.Forms.RadioButton();
             this.gbWhereToEat = new System.Windows.Forms.GroupBox();
-            this.rdTakeOut = new System.Windows.Forms.RadioButton();
-            this.rdEatIn = new System.Windows.Forms.RadioButton();
+            this.rbTakeOut = new System.Windows.Forms.RadioButton();
+            this.rbEatIn = new System.Windows.Forms.RadioButton();
             this.btnOrderPizza = new System.Windows.Forms.Button();
             this.btnResetForm = new System.Windows.Forms.Button();
             this.gbOrderSize = new System.Windows.Forms.GroupBox();
@@ -83,9 +83,9 @@
             // gbSize
             // 
             this.gbSize.BackColor = System.Drawing.Color.Transparent;
-            this.gbSize.Controls.Add(this.rdLarge);
-            this.gbSize.Controls.Add(this.rdMedium);
-            this.gbSize.Controls.Add(this.rdSmall);
+            this.gbSize.Controls.Add(this.rbLarge);
+            this.gbSize.Controls.Add(this.rbMedium);
+            this.gbSize.Controls.Add(this.rbSmall);
             this.gbSize.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(47)))), ((int)(((byte)(28)))));
             this.gbSize.Location = new System.Drawing.Point(99, 116);
@@ -95,47 +95,50 @@
             this.gbSize.TabStop = false;
             this.gbSize.Text = "Size";
             // 
-            // rdLarge
+            // rbLarge
             // 
-            this.rdLarge.AutoSize = true;
-            this.rdLarge.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdLarge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
-            this.rdLarge.Location = new System.Drawing.Point(45, 78);
-            this.rdLarge.Name = "rdLarge";
-            this.rdLarge.Size = new System.Drawing.Size(73, 27);
-            this.rdLarge.TabIndex = 2;
-            this.rdLarge.TabStop = true;
-            this.rdLarge.Text = "Large";
-            this.rdLarge.UseVisualStyleBackColor = true;
-            this.rdLarge.CheckedChanged += new System.EventHandler(this.rdLarge_CheckedChanged);
+            this.rbLarge.AutoSize = true;
+            this.rbLarge.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLarge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
+            this.rbLarge.Location = new System.Drawing.Point(45, 78);
+            this.rbLarge.Name = "rbLarge";
+            this.rbLarge.Size = new System.Drawing.Size(73, 27);
+            this.rbLarge.TabIndex = 2;
+            this.rbLarge.TabStop = true;
+            this.rbLarge.Tag = "30";
+            this.rbLarge.Text = "Large";
+            this.rbLarge.UseVisualStyleBackColor = true;
+            this.rbLarge.CheckedChanged += new System.EventHandler(this.rdLarge_CheckedChanged);
             // 
-            // rdMedium
+            // rbMedium
             // 
-            this.rdMedium.AutoSize = true;
-            this.rdMedium.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdMedium.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
-            this.rdMedium.Location = new System.Drawing.Point(45, 51);
-            this.rdMedium.Name = "rdMedium";
-            this.rdMedium.Size = new System.Drawing.Size(95, 27);
-            this.rdMedium.TabIndex = 1;
-            this.rdMedium.TabStop = true;
-            this.rdMedium.Text = "Medium";
-            this.rdMedium.UseVisualStyleBackColor = true;
-            this.rdMedium.CheckedChanged += new System.EventHandler(this.rdMedium_CheckedChanged);
+            this.rbMedium.AutoSize = true;
+            this.rbMedium.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMedium.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
+            this.rbMedium.Location = new System.Drawing.Point(45, 51);
+            this.rbMedium.Name = "rbMedium";
+            this.rbMedium.Size = new System.Drawing.Size(95, 27);
+            this.rbMedium.TabIndex = 1;
+            this.rbMedium.TabStop = true;
+            this.rbMedium.Tag = "20";
+            this.rbMedium.Text = "Medium";
+            this.rbMedium.UseVisualStyleBackColor = true;
+            this.rbMedium.CheckedChanged += new System.EventHandler(this.rdMedium_CheckedChanged);
             // 
-            // rdSmall
+            // rbSmall
             // 
-            this.rdSmall.AutoSize = true;
-            this.rdSmall.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdSmall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
-            this.rdSmall.Location = new System.Drawing.Point(45, 24);
-            this.rdSmall.Name = "rdSmall";
-            this.rdSmall.Size = new System.Drawing.Size(72, 27);
-            this.rdSmall.TabIndex = 0;
-            this.rdSmall.TabStop = true;
-            this.rdSmall.Text = "Small";
-            this.rdSmall.UseVisualStyleBackColor = true;
-            this.rdSmall.CheckedChanged += new System.EventHandler(this.rdSmall_CheckedChanged);
+            this.rbSmall.AutoSize = true;
+            this.rbSmall.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSmall.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
+            this.rbSmall.Location = new System.Drawing.Point(45, 24);
+            this.rbSmall.Name = "rbSmall";
+            this.rbSmall.Size = new System.Drawing.Size(72, 27);
+            this.rbSmall.TabIndex = 0;
+            this.rbSmall.TabStop = true;
+            this.rbSmall.Tag = "10";
+            this.rbSmall.Text = "Small";
+            this.rbSmall.UseVisualStyleBackColor = true;
+            this.rbSmall.CheckedChanged += new System.EventHandler(this.rdSmall_CheckedChanged);
             // 
             // gbToppings
             // 
@@ -165,6 +168,7 @@
             this.chkGreenPeppers.Size = new System.Drawing.Size(143, 27);
             this.chkGreenPeppers.TabIndex = 5;
             this.chkGreenPeppers.TabStop = false;
+            this.chkGreenPeppers.Tag = "5";
             this.chkGreenPeppers.Text = "Green Peppers";
             this.chkGreenPeppers.UseVisualStyleBackColor = true;
             this.chkGreenPeppers.CheckedChanged += new System.EventHandler(this.chkGreenPeppers_CheckedChanged);
@@ -179,6 +183,7 @@
             this.chkOlives.Size = new System.Drawing.Size(78, 27);
             this.chkOlives.TabIndex = 3;
             this.chkOlives.TabStop = false;
+            this.chkOlives.Tag = "5";
             this.chkOlives.Text = "Olives";
             this.chkOlives.UseVisualStyleBackColor = true;
             this.chkOlives.CheckedChanged += new System.EventHandler(this.chkOlives_CheckedChanged);
@@ -193,6 +198,7 @@
             this.chkOnion.Size = new System.Drawing.Size(79, 27);
             this.chkOnion.TabIndex = 1;
             this.chkOnion.TabStop = false;
+            this.chkOnion.Tag = "5";
             this.chkOnion.Text = "Onion";
             this.chkOnion.UseVisualStyleBackColor = true;
             this.chkOnion.CheckedChanged += new System.EventHandler(this.chkOnion_CheckedChanged);
@@ -207,6 +213,7 @@
             this.chkTomatoes.Size = new System.Drawing.Size(105, 27);
             this.chkTomatoes.TabIndex = 4;
             this.chkTomatoes.TabStop = false;
+            this.chkTomatoes.Tag = "5";
             this.chkTomatoes.Text = "Tomatoes";
             this.chkTomatoes.UseVisualStyleBackColor = true;
             this.chkTomatoes.CheckedChanged += new System.EventHandler(this.chkTomatoes_CheckedChanged);
@@ -221,6 +228,7 @@
             this.chkMushrooms.Size = new System.Drawing.Size(123, 27);
             this.chkMushrooms.TabIndex = 2;
             this.chkMushrooms.TabStop = false;
+            this.chkMushrooms.Tag = "5";
             this.chkMushrooms.Text = "Mushrooms";
             this.chkMushrooms.UseVisualStyleBackColor = true;
             this.chkMushrooms.CheckedChanged += new System.EventHandler(this.chkMushrooms_CheckedChanged);
@@ -234,6 +242,7 @@
             this.chkExtraCheese.Name = "chkExtraCheese";
             this.chkExtraCheese.Size = new System.Drawing.Size(122, 27);
             this.chkExtraCheese.TabIndex = 0;
+            this.chkExtraCheese.Tag = "5";
             this.chkExtraCheese.Text = "Extra Chees";
             this.chkExtraCheese.UseVisualStyleBackColor = true;
             this.chkExtraCheese.CheckedChanged += new System.EventHandler(this.chkExtraCheese_CheckedChanged);
@@ -241,8 +250,8 @@
             // gbCrustTybe
             // 
             this.gbCrustTybe.BackColor = System.Drawing.Color.Transparent;
-            this.gbCrustTybe.Controls.Add(this.rdThickCrust);
-            this.gbCrustTybe.Controls.Add(this.rdThinCrust);
+            this.gbCrustTybe.Controls.Add(this.rbThickCrust);
+            this.gbCrustTybe.Controls.Add(this.rbThinCrust);
             this.gbCrustTybe.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCrustTybe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(47)))), ((int)(((byte)(28)))));
             this.gbCrustTybe.Location = new System.Drawing.Point(99, 265);
@@ -252,38 +261,40 @@
             this.gbCrustTybe.TabStop = false;
             this.gbCrustTybe.Text = "Crust Type";
             // 
-            // rdThickCrust
+            // rbThickCrust
             // 
-            this.rdThickCrust.AutoSize = true;
-            this.rdThickCrust.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdThickCrust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
-            this.rdThickCrust.Location = new System.Drawing.Point(43, 59);
-            this.rdThickCrust.Name = "rdThickCrust";
-            this.rdThickCrust.Size = new System.Drawing.Size(116, 27);
-            this.rdThickCrust.TabIndex = 1;
-            this.rdThickCrust.Text = "Thick Crust";
-            this.rdThickCrust.UseVisualStyleBackColor = true;
-            this.rdThickCrust.CheckedChanged += new System.EventHandler(this.rdThickCrust_CheckedChanged);
+            this.rbThickCrust.AutoSize = true;
+            this.rbThickCrust.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbThickCrust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
+            this.rbThickCrust.Location = new System.Drawing.Point(43, 59);
+            this.rbThickCrust.Name = "rbThickCrust";
+            this.rbThickCrust.Size = new System.Drawing.Size(116, 27);
+            this.rbThickCrust.TabIndex = 1;
+            this.rbThickCrust.Tag = "10";
+            this.rbThickCrust.Text = "Thick Crust";
+            this.rbThickCrust.UseVisualStyleBackColor = true;
+            this.rbThickCrust.CheckedChanged += new System.EventHandler(this.rdThickCrust_CheckedChanged);
             // 
-            // rdThinCrust
+            // rbThinCrust
             // 
-            this.rdThinCrust.AutoSize = true;
-            this.rdThinCrust.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdThinCrust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
-            this.rdThinCrust.Location = new System.Drawing.Point(43, 32);
-            this.rdThinCrust.Name = "rdThinCrust";
-            this.rdThinCrust.Size = new System.Drawing.Size(109, 27);
-            this.rdThinCrust.TabIndex = 0;
-            this.rdThinCrust.TabStop = true;
-            this.rdThinCrust.Text = "Thin Crust";
-            this.rdThinCrust.UseVisualStyleBackColor = true;
-            this.rdThinCrust.CheckedChanged += new System.EventHandler(this.rdThinCrust_CheckedChanged);
+            this.rbThinCrust.AutoSize = true;
+            this.rbThinCrust.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbThinCrust.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
+            this.rbThinCrust.Location = new System.Drawing.Point(43, 32);
+            this.rbThinCrust.Name = "rbThinCrust";
+            this.rbThinCrust.Size = new System.Drawing.Size(109, 27);
+            this.rbThinCrust.TabIndex = 0;
+            this.rbThinCrust.TabStop = true;
+            this.rbThinCrust.Tag = "0";
+            this.rbThinCrust.Text = "Thin Crust";
+            this.rbThinCrust.UseVisualStyleBackColor = true;
+            this.rbThinCrust.CheckedChanged += new System.EventHandler(this.rdThinCrust_CheckedChanged);
             // 
             // gbWhereToEat
             // 
             this.gbWhereToEat.BackColor = System.Drawing.Color.Transparent;
-            this.gbWhereToEat.Controls.Add(this.rdTakeOut);
-            this.gbWhereToEat.Controls.Add(this.rdEatIn);
+            this.gbWhereToEat.Controls.Add(this.rbTakeOut);
+            this.gbWhereToEat.Controls.Add(this.rbEatIn);
             this.gbWhereToEat.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbWhereToEat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(47)))), ((int)(((byte)(28)))));
             this.gbWhereToEat.Location = new System.Drawing.Point(408, 272);
@@ -293,32 +304,32 @@
             this.gbWhereToEat.TabStop = false;
             this.gbWhereToEat.Text = "Where To Eat";
             // 
-            // rdTakeOut
+            // rbTakeOut
             // 
-            this.rdTakeOut.AutoSize = true;
-            this.rdTakeOut.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdTakeOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
-            this.rdTakeOut.Location = new System.Drawing.Point(273, 46);
-            this.rdTakeOut.Name = "rdTakeOut";
-            this.rdTakeOut.Size = new System.Drawing.Size(96, 27);
-            this.rdTakeOut.TabIndex = 1;
-            this.rdTakeOut.Text = "Take out";
-            this.rdTakeOut.UseVisualStyleBackColor = true;
-            this.rdTakeOut.CheckedChanged += new System.EventHandler(this.rdTakeOut_CheckedChanged);
+            this.rbTakeOut.AutoSize = true;
+            this.rbTakeOut.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbTakeOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
+            this.rbTakeOut.Location = new System.Drawing.Point(273, 46);
+            this.rbTakeOut.Name = "rbTakeOut";
+            this.rbTakeOut.Size = new System.Drawing.Size(96, 27);
+            this.rbTakeOut.TabIndex = 1;
+            this.rbTakeOut.Text = "Take out";
+            this.rbTakeOut.UseVisualStyleBackColor = true;
+            this.rbTakeOut.CheckedChanged += new System.EventHandler(this.rdTakeOut_CheckedChanged);
             // 
-            // rdEatIn
+            // rbEatIn
             // 
-            this.rdEatIn.AutoSize = true;
-            this.rdEatIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdEatIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
-            this.rdEatIn.Location = new System.Drawing.Point(95, 46);
-            this.rdEatIn.Name = "rdEatIn";
-            this.rdEatIn.Size = new System.Drawing.Size(74, 27);
-            this.rdEatIn.TabIndex = 0;
-            this.rdEatIn.TabStop = true;
-            this.rdEatIn.Text = "Eat in";
-            this.rdEatIn.UseVisualStyleBackColor = true;
-            this.rdEatIn.CheckedChanged += new System.EventHandler(this.rdEatIn_CheckedChanged);
+            this.rbEatIn.AutoSize = true;
+            this.rbEatIn.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEatIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
+            this.rbEatIn.Location = new System.Drawing.Point(95, 46);
+            this.rbEatIn.Name = "rbEatIn";
+            this.rbEatIn.Size = new System.Drawing.Size(74, 27);
+            this.rbEatIn.TabIndex = 0;
+            this.rbEatIn.TabStop = true;
+            this.rbEatIn.Text = "Eat in";
+            this.rbEatIn.UseVisualStyleBackColor = true;
+            this.rbEatIn.CheckedChanged += new System.EventHandler(this.rdEatIn_CheckedChanged);
             // 
             // btnOrderPizza
             // 
@@ -371,7 +382,7 @@
             this.gbOrderSize.Controls.Add(this.label2);
             this.gbOrderSize.Controls.Add(this.lbSizeAnswer);
             this.gbOrderSize.Controls.Add(this.lbSize1);
-            this.gbOrderSize.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.gbOrderSize.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.gbOrderSize.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrderSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(47)))), ((int)(((byte)(28)))));
             this.gbOrderSize.Location = new System.Drawing.Point(970, 116);
@@ -380,7 +391,6 @@
             this.gbOrderSize.TabIndex = 6;
             this.gbOrderSize.TabStop = false;
             this.gbOrderSize.Text = "     Order Summary";
-            this.gbOrderSize.UseWaitCursor = true;
             // 
             // lbPriceAnswer
             // 
@@ -392,11 +402,11 @@
             this.lbPriceAnswer.Size = new System.Drawing.Size(63, 44);
             this.lbPriceAnswer.TabIndex = 9;
             this.lbPriceAnswer.Text = "0$";
-            this.lbPriceAnswer.UseWaitCursor = true;
             // 
             // lbPrice
             // 
             this.lbPrice.AutoSize = true;
+            this.lbPrice.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lbPrice.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
             this.lbPrice.Location = new System.Drawing.Point(31, 292);
@@ -404,7 +414,6 @@
             this.lbPrice.Size = new System.Drawing.Size(58, 21);
             this.lbPrice.TabIndex = 8;
             this.lbPrice.Text = "Price:";
-            this.lbPrice.UseWaitCursor = true;
             // 
             // lbWhereToEatAnswer
             // 
@@ -416,11 +425,11 @@
             this.lbWhereToEatAnswer.Size = new System.Drawing.Size(92, 21);
             this.lbWhereToEatAnswer.TabIndex = 7;
             this.lbWhereToEatAnswer.Text = "No choose.";
-            this.lbWhereToEatAnswer.UseWaitCursor = true;
             // 
             // lbWhereToEat
             // 
             this.lbWhereToEat.AutoSize = true;
+            this.lbWhereToEat.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lbWhereToEat.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbWhereToEat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
             this.lbWhereToEat.Location = new System.Drawing.Point(31, 234);
@@ -428,7 +437,6 @@
             this.lbWhereToEat.Size = new System.Drawing.Size(129, 21);
             this.lbWhereToEat.TabIndex = 6;
             this.lbWhereToEat.Text = "Where To Eat:";
-            this.lbWhereToEat.UseWaitCursor = true;
             // 
             // lbCrustTybeAnswer
             // 
@@ -440,11 +448,11 @@
             this.lbCrustTybeAnswer.Size = new System.Drawing.Size(92, 21);
             this.lbCrustTybeAnswer.TabIndex = 5;
             this.lbCrustTybeAnswer.Text = "No choose.";
-            this.lbCrustTybeAnswer.UseWaitCursor = true;
             // 
             // lbCrustTybe
             // 
             this.lbCrustTybe.AutoSize = true;
+            this.lbCrustTybe.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lbCrustTybe.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCrustTybe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
             this.lbCrustTybe.Location = new System.Drawing.Point(31, 190);
@@ -452,24 +460,22 @@
             this.lbCrustTybe.Size = new System.Drawing.Size(107, 21);
             this.lbCrustTybe.TabIndex = 4;
             this.lbCrustTybe.Text = "Crust Tybe:";
-            this.lbCrustTybe.UseWaitCursor = true;
             // 
             // lbToppingsAnswer
             // 
-            this.lbToppingsAnswer.AutoSize = true;
-            this.lbToppingsAnswer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.lbToppingsAnswer.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.lbToppingsAnswer.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbToppingsAnswer.ForeColor = System.Drawing.Color.Red;
-            this.lbToppingsAnswer.Location = new System.Drawing.Point(84, 111);
+            this.lbToppingsAnswer.Location = new System.Drawing.Point(84, 112);
             this.lbToppingsAnswer.Name = "lbToppingsAnswer";
-            this.lbToppingsAnswer.Size = new System.Drawing.Size(107, 21);
+            this.lbToppingsAnswer.Size = new System.Drawing.Size(252, 78);
             this.lbToppingsAnswer.TabIndex = 3;
             this.lbToppingsAnswer.Text = "No Toppings.";
-            this.lbToppingsAnswer.UseWaitCursor = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
             this.label2.Location = new System.Drawing.Point(31, 78);
@@ -477,12 +483,11 @@
             this.label2.Size = new System.Drawing.Size(95, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Toppings:";
-            this.label2.UseWaitCursor = true;
             // 
             // lbSizeAnswer
             // 
             this.lbSizeAnswer.AutoSize = true;
-            this.lbSizeAnswer.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.lbSizeAnswer.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.lbSizeAnswer.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSizeAnswer.ForeColor = System.Drawing.Color.Red;
             this.lbSizeAnswer.Location = new System.Drawing.Point(84, 35);
@@ -490,11 +495,11 @@
             this.lbSizeAnswer.Size = new System.Drawing.Size(92, 21);
             this.lbSizeAnswer.TabIndex = 1;
             this.lbSizeAnswer.Text = "No choose.";
-            this.lbSizeAnswer.UseWaitCursor = true;
             // 
             // lbSize1
             // 
             this.lbSize1.AutoSize = true;
+            this.lbSize1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.lbSize1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSize1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(53)))), ((int)(((byte)(34)))));
             this.lbSize1.Location = new System.Drawing.Point(31, 34);
@@ -502,7 +507,6 @@
             this.lbSize1.Size = new System.Drawing.Size(56, 21);
             this.lbSize1.TabIndex = 0;
             this.lbSize1.Text = "Size: ";
-            this.lbSize1.UseWaitCursor = true;
             // 
             // Form1
             // 
@@ -541,9 +545,9 @@
 
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.GroupBox gbSize;
-        private System.Windows.Forms.RadioButton rdLarge;
-        private System.Windows.Forms.RadioButton rdMedium;
-        private System.Windows.Forms.RadioButton rdSmall;
+        private System.Windows.Forms.RadioButton rbLarge;
+        private System.Windows.Forms.RadioButton rbMedium;
+        private System.Windows.Forms.RadioButton rbSmall;
         private System.Windows.Forms.GroupBox gbToppings;
         private System.Windows.Forms.CheckBox chkTomatoes;
         private System.Windows.Forms.CheckBox chkMushrooms;
@@ -552,11 +556,11 @@
         private System.Windows.Forms.CheckBox chkOlives;
         private System.Windows.Forms.CheckBox chkOnion;
         private System.Windows.Forms.GroupBox gbCrustTybe;
-        private System.Windows.Forms.RadioButton rdThinCrust;
-        private System.Windows.Forms.RadioButton rdThickCrust;
+        private System.Windows.Forms.RadioButton rbThinCrust;
+        private System.Windows.Forms.RadioButton rbThickCrust;
         private System.Windows.Forms.GroupBox gbWhereToEat;
-        private System.Windows.Forms.RadioButton rdTakeOut;
-        private System.Windows.Forms.RadioButton rdEatIn;
+        private System.Windows.Forms.RadioButton rbTakeOut;
+        private System.Windows.Forms.RadioButton rbEatIn;
         private System.Windows.Forms.Button btnOrderPizza;
         private System.Windows.Forms.Button btnResetForm;
         private System.Windows.Forms.GroupBox gbOrderSize;

@@ -60,7 +60,7 @@
             this.btnGame2.Size = new System.Drawing.Size(118, 107);
             this.btnGame2.TabIndex = 3;
             this.btnGame2.UseVisualStyleBackColor = false;
-            this.btnGame2.Click += new System.EventHandler(this.btnGame2_Click);
+            this.btnGame2.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // lbTitel
             // 
@@ -90,7 +90,7 @@
             this.btnGame5.Size = new System.Drawing.Size(118, 107);
             this.btnGame5.TabIndex = 5;
             this.btnGame5.UseVisualStyleBackColor = false;
-            this.btnGame5.Click += new System.EventHandler(this.btnGame5_Click);
+            this.btnGame5.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // btnGame8
             // 
@@ -106,7 +106,7 @@
             this.btnGame8.Size = new System.Drawing.Size(118, 107);
             this.btnGame8.TabIndex = 6;
             this.btnGame8.UseVisualStyleBackColor = false;
-            this.btnGame8.Click += new System.EventHandler(this.btnGame8_Click);
+            this.btnGame8.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // btnGame9
             // 
@@ -122,7 +122,7 @@
             this.btnGame9.Size = new System.Drawing.Size(118, 107);
             this.btnGame9.TabIndex = 9;
             this.btnGame9.UseVisualStyleBackColor = false;
-            this.btnGame9.Click += new System.EventHandler(this.btnGame9_Click);
+            this.btnGame9.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // btnGame6
             // 
@@ -138,7 +138,7 @@
             this.btnGame6.Size = new System.Drawing.Size(118, 107);
             this.btnGame6.TabIndex = 8;
             this.btnGame6.UseVisualStyleBackColor = false;
-            this.btnGame6.Click += new System.EventHandler(this.btnGame6_Click);
+            this.btnGame6.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // btnGame3
             // 
@@ -154,7 +154,7 @@
             this.btnGame3.Size = new System.Drawing.Size(118, 107);
             this.btnGame3.TabIndex = 7;
             this.btnGame3.UseVisualStyleBackColor = false;
-            this.btnGame3.Click += new System.EventHandler(this.btnGame3_Click);
+            this.btnGame3.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // btnGame7
             // 
@@ -170,7 +170,7 @@
             this.btnGame7.Size = new System.Drawing.Size(118, 107);
             this.btnGame7.TabIndex = 12;
             this.btnGame7.UseVisualStyleBackColor = false;
-            this.btnGame7.Click += new System.EventHandler(this.btnGame7_Click);
+            this.btnGame7.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // btnGame4
             // 
@@ -186,7 +186,7 @@
             this.btnGame4.Size = new System.Drawing.Size(118, 107);
             this.btnGame4.TabIndex = 11;
             this.btnGame4.UseVisualStyleBackColor = false;
-            this.btnGame4.Click += new System.EventHandler(this.btnGame4_Click);
+            this.btnGame4.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // btnGame1
             // 
@@ -202,7 +202,7 @@
             this.btnGame1.Size = new System.Drawing.Size(118, 107);
             this.btnGame1.TabIndex = 10;
             this.btnGame1.UseVisualStyleBackColor = false;
-            this.btnGame1.Click += new System.EventHandler(this.btnGame1_Click);
+            this.btnGame1.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // lbTurn
             // 

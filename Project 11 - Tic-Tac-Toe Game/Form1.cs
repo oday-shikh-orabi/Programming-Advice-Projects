@@ -232,47 +232,7 @@ namespace Tic_Tac_Toe_Game_Project
             RestartGame();
         }
 
-        private void btnGame1_Click(object sender, EventArgs e)
-        {
-            ChangeImage((Button)sender);
-        }
-
-        private void btnGame2_Click(object sender, EventArgs e)
-        {
-            ChangeImage((Button)sender);
-        }
-
-        private void btnGame3_Click(object sender, EventArgs e)
-        {
-            ChangeImage((Button)sender);
-        }
-
-        private void btnGame4_Click(object sender, EventArgs e)
-        {
-            ChangeImage((Button)sender);
-        }
-
-        private void btnGame5_Click(object sender, EventArgs e)
-        {
-            ChangeImage((Button)sender);
-        }
-
-        private void btnGame6_Click(object sender, EventArgs e)
-        {
-            ChangeImage((Button)sender);
-        }
-
-        private void btnGame7_Click(object sender, EventArgs e)
-        {
-            ChangeImage((Button)sender);
-        }
-
-        private void btnGame8_Click(object sender, EventArgs e)
-        {
-            ChangeImage((Button)sender);
-        }
-
-        private void btnGame9_Click(object sender, EventArgs e)
+        private void btnGame_Click(object sender, EventArgs e)
         {
             ChangeImage((Button)sender);
         }
